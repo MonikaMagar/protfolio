@@ -1,0 +1,142 @@
+/* Contact.css */
+
+.container {
+  max-width: 1000px; /* Center the container */
+  text-align: center;
+  margin-top: 20px;
+  bottom: 10px;
+  
+}
+
+
+
+
+
+.contact-heading {
+  
+  font-size: 2rem; /* Size of the heading */
+  padding: 0.1rem; /* Padding around the text */
+  border: 3px solid #00b9fc; /* Border around the heading */
+  background-color: #00bbff; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+  font-family: Georgia; /* Font family */
+  display: inline-block; /* Make the border wrap tightly around the text */
+  position: relative; /* Positioning for pseudo-elements */
+  z-index: 1; /* Ensure it's above the lines */
+  
+  /* Shadow effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur radius, Color */
+}
+
+/* Adding left and right lines */
+.contact-heading::before,
+.contact-heading::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* Center vertically */
+  width: 70px; /* Length of the lines */
+  height: 3px; /* Thickness of the lines */
+  background-color: #15ade4; /* Line color */
+  z-index: 1; /* Behind the heading */
+}
+
+.contact-heading::before {
+  left: -70px; /* Positioning for the left line */
+}
+
+.contact-heading::after {
+  right: -70px; /* Positioning for the right line */
+}
+
+
+.contact-card {
+  background-color: #f8f9fa; /* Light background color */
+  border: 1px solid #dee2e6; /* Border around the card */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 1.5rem; /* Add some padding */
+  transition: transform 0.2s; /* Animation for hover effect */
+  color: #000000;
+}
+
+.contact-card:hover {
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+
+/* Text styles for light and dark themes */
+.card-body{
+  color: #000000;
+}
+.card-title {
+  font-size: 2rem; /* Larger font for the card title */
+  margin-bottom: 1rem; /* Space below the title */
+  color: #000000;
+}
+
+.card-text {
+  font-size: 1rem; /* Font size for card text */
+  line-height: 1.5; /* Space between lines */
+  color: #000000;
+}
+
+/* Theme-specific styles */
+.dark .card-text, .dark .card-title {
+  color: #000000; /* Light text color for dark theme */
+}
+
+.light .card-text, .light .card-title {
+  color: #000000; /* Dark text color for light theme */
+}
+
+.invalid-feedback {
+  font-size: 0.875rem; /* Smaller font for error messages */
+}
+
+.form-group {
+  margin-bottom: 1.5rem; /* Space between form fields */
+}
+
+.btn1 {
+  width: 30%;
+  height: 40px; /* Make button height consistent */
+  border-radius: 10px;
+  margin-top: 1rem; /* Add some space above the button */
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 1rem; /* Space above social icons */
+}
+
+.social-icon {
+  display: inline-block; /* Allow margin and padding */
+  margin-right: 10px; /* Space between icons */
+  font-size: 1.5rem; /* Size of the icons */
+  color: #007bff; /* Bootstrap primary color for the icons */
+  border-radius: 50%; /* Make icons round */
+  width: 40px; /* Set width */
+  height: 40px; /* Set height */
+  display: flex; /* Center icon inside */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Animation for hover effect */
+  background-color: #000000; /* Light background on hover */
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Scale up on hover */
+ 
+  
+}
+
+/* Additional responsive design */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  .btn1 {
+    width: 100%; /* Make button full width on smaller screens */
+  }
+}

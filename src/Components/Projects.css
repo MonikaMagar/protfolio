@@ -1,0 +1,80 @@
+/* Projects.css */
+
+.projects-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-heading {
+    font-size: 2rem; /* Size of the heading */
+    padding: 0.1rem; /* Padding around the text */
+    border: 3px solid #00b9fc; /* Border around the heading */
+    background-color: #00bbff; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    font-family: Georgia; /* Font family */
+    display: inline-block; /* Make the border wrap tightly around the text */
+    position: relative; /* Positioning for pseudo-elements */
+    z-index: 1; /* Ensure it's above the lines */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.projects-row {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    flex-wrap: wrap; /* Wrap cards if necessary */
+    margin-top: 20px; /* Space above the project cards */
+}
+
+.project-card {
+    background-color: white; /* White background for each card */
+    border: 1px solid #dee2e6; /* Border color for the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    padding: 20px;
+    min-width: 300px; /* Minimum width for cards */
+    max-width: 500px; /* Maximum width for cards */
+    margin: 10px; /* Margin between cards */
+    box-shadow: 0 14px 12px 22px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.project-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.project-description {
+    margin-bottom: 10px; /* Space below the description */
+}
+
+.read-more-button {
+    background-color: #007bff; /* Button color */
+    color: rgb(252, 252, 252); /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 12px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin-right: 10px; /* Space between the buttons */
+}
+
+.read-more-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.view-project-button {
+    display: inline-block; /* Make it an inline block */
+    margin-top: 10px; /* Space above the link */
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Bootstrap primary color */
+    font-weight: bold; /* Bold text */
+}
+
+.view-project-button:hover {
+    text-decoration: underline; /* Underline on hover */
+}

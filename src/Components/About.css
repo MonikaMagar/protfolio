@@ -1,0 +1,146 @@
+/* src/Components/About.css */
+
+/* Default styles (for larger screens) */
+.about-container {
+  text-align: center;
+  position: relative;
+  margin: 11rem 0; /* Large margin for desktop view */
+}
+
+.about-heading {
+  font-size: 2rem; /* Heading size for large screens */
+  padding: 0.1rem;
+  border: 3px solid #00b9fc;
+  background-color: #00bbff;
+  border-radius: 10px;
+  font-family: Georgia;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-heading::before,
+.about-heading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 70px; /* Length of the lines */
+  height: 3px; /* Thickness of the lines */
+  background-color: #15ade4;
+  z-index: 1;
+}
+
+.about-heading::before {
+  left: -70px; /* Position left line */
+}
+
+.about-heading::after {
+  right: -70px; /* Position right line */
+}
+
+.about-content {
+  max-width: 800px; /* Limit content width */
+  margin: 1.5rem auto; /* Center the content */
+  padding: 1rem;
+  text-align: center; /* Center the text */
+  border: 2px blanchedalmond;
+}
+
+.about-content p {
+  font-size: 1.2rem; /* Paragraph font size */
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.about-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* Padding inside the card */
+  margin: 2rem auto; /* Center the card */
+  max-width: 800px; /* Limit card width */
+}
+
+.about-content {
+  text-align: left; /* Align content text to the left */
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Media Queries */
+
+/* For screens smaller than 768px (tablets and mobile portrait) */
+@media (max-width: 768px) {
+  .about-heading {
+      font-size: 1.8rem; /* Slightly reduce the heading font size */
+      padding: 0.3rem; /* Add padding */
+  }
+
+  .about-heading::before,
+  .about-heading::after {
+      width: 50px; /* Shorten the lines */
+      left: -50px; /* Position the left line */
+      right: -50px; /* Position the right line equally */
+  }
+
+  .about-container {
+      margin: 6rem 0; /* Reduce the top/bottom margin */
+  }
+
+  .about-content {
+      max-width: 90%; /* Use more of the screen width */
+      padding: 1rem; /* Slightly smaller padding */
+      text-align: left; /* Align text to the left */
+  }
+
+  .about-content p {
+      font-size: 1.1rem; /* Slightly smaller font size */
+      line-height: 1.4; /* Increase line height for readability */
+  }
+
+  .about-card {
+      padding: 1.5rem; /* Less padding inside the card */
+      max-width: 90%; /* Adjust card width */
+  }
+}
+
+/* For screens smaller than 480px (mobile portrait) */
+@media (max-width: 480px) {
+  .about-heading {
+      font-size: 1.5rem; /* Reduce font size more */
+      padding: 0.2rem; /* Less padding around the text */
+  }
+
+  .about-heading::before,
+  .about-heading::after {
+      width: 40px; /* Even shorter lines */
+      left: -40px;
+      right: -40px;
+  }
+
+  .about-container {
+      margin: 4rem 0; /* Further reduce margin */
+  }
+
+  .about-content {
+      max-width: 95%; /* Make content block more flexible */
+      padding: 0.8rem; /* Even smaller padding */
+  }
+
+  .about-content p {
+      font-size: 1rem; /* Further decrease font size */
+      line-height: 1.5; /* Adequate line height for readability */
+  }
+
+  .about-card {
+      padding: 1rem; /* Less padding inside the card */
+      max-width: 95%; /* Adjust card width */
+  }
+}

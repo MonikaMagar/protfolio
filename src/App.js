@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import About from './Components/About';
+import Skill from './Components/Skill';
+import Projects from './Components/Projects';
+import Services from './Components/Services';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDark(prev => !prev);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={isDark ? 'app dark' : 'app light'}>
+      <Navbar toggleTheme={toggleTheme} isDark={isDark} />
+      
+      <div id="home"><Home /></div>
+      <div id="about"><About /></div>
+      <div id="skills"><Skill /></div>
+      <div id="projects"><Projects /></div>
+      <div id="services"><Services /></div>
+      <div id="contact"><Contact /></div>
+      
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

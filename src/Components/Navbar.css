@@ -1,0 +1,57 @@
+/* src/Components/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px); /* Optional: add a blur effect */
+  font-family: 'Gill Sans';
+  font-size: 150%;
+  top: 0;
+  transition: background 0.3s, color 0.3s; /* Added color transition */
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+/* Light Theme */
+.navbar.light {
+  color: #333; /* Dark text */
+}
+
+.navbar-links.light a {
+  color: #333; /* Link color in light theme */
+}
+
+.theme-toggle.light {
+  color: #333; /* Icon color in light theme */
+}
+
+/* Dark Theme */
+.navbar.dark {
+  color: #fff; /* Light text */
+}
+
+.navbar-links.dark a {
+  color: #fff; /* Link color in dark theme */
+}
+
+.theme-toggle.dark {
+  color: #fff; /* Icon color in dark theme */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 60px; /* Spacing between links */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #007BFF; /* Change color on hover */
+}
+
+.theme-toggle {
+  font-size: 1.5rem;
+}
